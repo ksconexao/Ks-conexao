@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KS Conexão</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f2f2f2; margin: 0; padding: 0; }
+    header, footer { background: #222; color: white; text-align: center; padding: 20px; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    section { padding: 20px; max-width: 900px; margin: auto; }
+    h2 { color: #333; }
+    img { max-width: 100%; margin: 10px 0; border-radius: 8px; }
+    form { margin-top: 20px; }
+    form label, form select, form input { display: block; margin-top: 10px; width: 100%; max-width: 400px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KS Conexão</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#orcamento">Pré-Orçamento</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Especializados em soluções elétricas e construção civil com foco na qualidade e segurança dos nossos serviços.</p>
+    <a href="imagem1.jpg" target="_blank"><img src="imagem1.jpg" alt="Obra KS Conexão"></a>
+  </section>
+
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <p>Veja alguns de nossos trabalhos e serviços prestados:</p>
+    <a href="imagem2.jpg" target="_blank"><img src="imagem2.jpg" alt="Serviço 1"></a>
+    <a href="imagem3.jpg" target="_blank"><img src="imagem3.jpg" alt="Serviço 2"></a>
+  </section>
+
+  <section id="orcamento">
+    <h2>Pré-Orçamento</h2>
+    <form onsubmit="return enviarWhatsApp(this)">
+      <label for="tipo">Tipo de serviço desejado:</label>
+      <select name="tipo" id="tipo" required>
+        <option value="">Selecione...</option>
+        <option value="Instalação elétrica">Instalação elétrica</option>
+        <option value="Reparo elétrico">Reparo elétrico</option>
+        <option value="Projeto elétrico completo">Projeto elétrico completo</option>
+        <option value="Outros serviços">Outros serviços</option>
+      </select>
+      <input type="submit" value="Enviar para WhatsApp" />
+    </form>
+    <script>
+      function enviarWhatsApp(form) {
+        const tipo = form.tipo.value;
+        const mensagem = `Olá! Gostaria de um orçamento para: ${tipo}`;
+        window.open(`https://wa.me/5599999999999?text=${encodeURIComponent(mensagem)}`, "_blank");
+        return false;
+      }
+    </script>
+  </section>
+
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <p>Siga a KS Conexão nas redes sociais:</p>
+    <p>
+      <a href="https://www.instagram.com/ks_conexao" target="_blank">Instagram</a> |
+      <a href="https://www.tiktok.com/@ks.conexao" target="_blank">TikTok</a>
+    </p>
+    <a href="imagem4.jpg" target="_blank"><img src="imagem4.jpg" alt="Trabalho finalizado"></a>
+    <a href="imagem5.jpg" target="_blank"><img src="imagem5.jpg" alt="Serviço técnico"></a>
+  </section>
+
+  <footer>
+    <p>KS Conexão © 2025 - CNPJ: 59.406.213/0001-60</p>
+  </footer>
+</body>
+</html>
